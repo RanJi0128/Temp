@@ -1,6 +1,5 @@
-var services = angular.module('services',[]);
 
-services.factory('UsuariosFactory',function($resource){
+app.factory('UsuariosFactory',function($resource){
 
 	return $resource('http://localhost::port/api/Usuario/',{port: '58839'},{
 		query: {method: 'GET', isArray: true},
@@ -10,7 +9,7 @@ services.factory('UsuariosFactory',function($resource){
 
 });
 
-services.factory('UsuariosPacienteFactory',function($resource){
+app.factory('UsuariosPacienteFactory',function($resource){
 
 	return $resource('http://localhost::port/api/Usuario/CadastrarPaciente/',{port: '58839'},{
 		cadastrarPaciente: {method: 'POST'}//,
@@ -18,7 +17,7 @@ services.factory('UsuariosPacienteFactory',function($resource){
 
 });
 
-services.factory('UsuariosPessoaFactory',function($resource){
+app.factory('UsuariosPessoaFactory',function($resource){
 
 	return $resource('http://localhost::port/api/Usuario/PostPessoa/',{port: '58839'},{
 		create: {method: 'POST'},
@@ -27,7 +26,7 @@ services.factory('UsuariosPessoaFactory',function($resource){
 
 });
 
-services.factory('UsuarioFactory',function($resource){
+app.factory('UsuarioFactory',function($resource){
 
 	return $resource('http://localhost::port/api/Usuario?id=:id/',{port: '58839',id: '@id'},{
 		show: {method: 'GET' },

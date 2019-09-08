@@ -1,6 +1,6 @@
 
 
-var app = angular.module('myApp',['ngRoute','ngResource','LocalStorageModule','services','controllers']);
+var app = angular.module('myApp',['ngRoute','ngResource','LocalStorageModule']);
 
 app.config(function($routeProvider)
 {
@@ -15,7 +15,7 @@ app.config(function($routeProvider)
 
    // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
    .when('/', {
-    templateUrl : '../../login/login.html',
+    templateUrl : '/login/login.html',
     controller     : 'loginController',
   })
    .when('/login/:msgError', {
@@ -31,7 +31,7 @@ app.config(function($routeProvider)
    // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
    .when('/home', {
     templateUrl : '/home/home.html'
-    // ,controller  : 'HomeCtrl',
+     ,controller  : 'HomeCtrl',
   })
    .when('/adicionarProduto', {
     templateUrl : '/produto/adicionar.html',

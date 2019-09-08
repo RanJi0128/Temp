@@ -1,7 +1,5 @@
 'use strict';
 
-var app = angular.module('controllers',[]);
-
 app.controller('loginController', ['$scope', '$location', 'authService','UsuariosFactory',
 'UsuariosPessoaFactory','$filter','$routeParams','localStorageService', function ($scope, $location, authService,UsuariosFactory,UsuariosPessoaFactory,$filter,$routeParams,localStorageService) {
 
